@@ -93,7 +93,10 @@ export const BottomNavBar: FC = () => {
           }}
           className={`h-6 bottom-10 xs:bottom-16 absolute z-5 flex justify-center items-center`}
         >
-          <img src="/circle.svg" className="w-3 shadow rounded-full" />
+          <img
+            src={import.meta.env.BASE_URL + "/circle.svg"}
+            className="w-3 shadow rounded-full"
+          />
         </div>
       </div>
     </div>

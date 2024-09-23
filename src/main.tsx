@@ -12,44 +12,41 @@ const Education = lazy(() => import("./pages/Education.tsx"));
 import AnimatedBackground from "./components/AnimatedBackground.tsx";
 import Contact from "./pages/Contact.tsx";
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <App />,
-    children: [
-      {
-        element: <Home />,
-        path: "/",
-        // loader: gsapLoader,
-      },
-      {
-        element: <About />,
-        path: "/about",
-        // loader: gsapLoader,
-      },
-      {
-        element: <Experience />,
-        path: "/experience",
-        // loader: gsapLoader,
-      },
-      {
-        element: <Education />,
-        path: "/education",
-        // loader: gsapLoader,
-      },
-      {
-        element: <Contact />,
-        path: "/contact",
-        // loader: gsapLoader,
-      },
-      {
-        element: <Home />,
-        path: "*",
-        // loader: gsapLoader,
-      },
-    ],
-  },
-]);
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <App />,
+      children: [
+        {
+          element: <Home />,
+          path: "/",
+        },
+        {
+          element: <About />,
+          path: "/about",
+        },
+        {
+          element: <Experience />,
+          path: "/experience",
+        },
+        {
+          element: <Education />,
+          path: "/education",
+        },
+        {
+          element: <Contact />,
+          path: "/contact",
+        },
+        {
+          element: <Home />,
+          path: "*",
+        },
+      ],
+    },
+  ],
+  { basename: import.meta.env.BASE_URL }
+);
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>

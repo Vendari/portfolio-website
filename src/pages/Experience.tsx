@@ -156,7 +156,7 @@ function Experience() {
                 >
                   <CardHeader className="pb-2 flex-row items-start w-full gap-2">
                     <img
-                      src={experience.logo}
+                      src={import.meta.env.BASE_URL + experience.logo}
                       className="w-20 h-20 object-contain bg-white rounded-full"
                     />
                     <div className={`flex flex-col`}>
@@ -211,7 +211,7 @@ function Experience() {
                 >
                   <CardHeader className="pb-2 flex-row items-start w-full gap-2">
                     <img
-                      src={experience.logo}
+                      src={import.meta.env.BASE_URL + experience.logo}
                       className="w-20 h-20 object-contain bg-white rounded-full"
                     />
                     <div className={`flex flex-col`}>
