@@ -34,10 +34,10 @@ function About() {
             src={import.meta.env.BASE_URL + "/profile.jpg"}
             width={100}
             height={100}
-            className="w-2/3 md:w-1/3 aspect-square object-cover rounded-full  animate-float"
+            className="w-2/5 md:w-2/3 lg:w-1/3 aspect-square object-cover rounded-full  animate-float"
           />
           <div className="flex flex-col items-start text-start">
-            <p className="text-lg lg:text-xl text-white font-semibold opacity-90">
+            <p className="text-md md:text-lg lg:text-xl text-white font-semibold opacity-90">
               I'm a <b>Technical Lead</b> and a <b>Full Stack Engineer</b> with
               a strong focus on <b>TypeScript-based frameworks</b>. I have
               successfully delivered multiple <b>web and mobile</b> projects and

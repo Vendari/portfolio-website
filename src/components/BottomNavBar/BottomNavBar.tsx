@@ -75,7 +75,7 @@ export const BottomNavBar: FC = () => {
                     style: { transition: "300ms" },
                   })}
                   {isActive || isTransitioning ? (
-                    <span className="hidden xs:block">{route.name}</span>
+                    <span className="hidden sm:block">{route.name}</span>
                   ) : (
                     ""
                   )}

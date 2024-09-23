@@ -203,7 +203,7 @@ function Experience() {
           </>
         ) : (
           <>
-            <div className="flex flex-col gap-10 absolute px-4 overflow-auto h-full top-16 h-[calc(100%-12rem)] py-20 w-screen">
+            <div className="flex flex-col gap-10 absolute px-4 overflow-auto h-full top-16 h-[calc(100%-12.0rem)] py-20 w-screen">
               {content.map((experience) => (
                 <Card
                   key={experience.name}
@@ -240,7 +240,7 @@ function Experience() {
             <div className="absolute bottom-20 flex w-full items-center justify-around pt-3">
               <Button
                 variant="ghost"
-                className="opacity-90 hover:opacity-80 text-neutral-700 gap-2"
+                className="opacity-90 hover:opacity-80 text-neutral-50 hover:text-neutral-700 gap-2"
                 onClick={() => navigate("/about")}
               >
                 <RxArrowLeft size={20} />
@@ -248,7 +248,7 @@ function Experience() {
               </Button>
               <Button
                 variant="ghost"
-                className="opacity-90 hover:opacity-80 animate-wiggle  text-neutral-700 gap-2"
+                className="opacity-90 hover:opacity-80 animate-wiggle  text-neutral-50 hover:text-neutral-700 gap-2"
                 onClick={() => navigate("/education")}
               >
                 Education
