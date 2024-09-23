@@ -1,0 +1,23 @@
+@keyframes jump0 {
+  0% {
+    padding-bottom: 0%;
+  }
+  50% {
+    padding-bottom: 3%;
+  }
+  100% {
+    padding-bottom: 0%;
+  }
+}
+
+@keyframes jump1 {
+  0% {
+    padding-bottom: 0%;
+  }
+  50% {
+    padding-bottom: 3%;
+  }
+  100% {
+    padding-bottom: 0%;
+  }
+}

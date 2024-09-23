@@ -1,13 +1,16 @@
+import { Outlet } from "react-router-dom";
 import { TopBar } from "./components/TopBar";
-import { AnimatedBackground } from "./components/AnimatedBackground";
 
-function App() {
+import { BottomNavBar } from "./components/BottomNavBar/BottomNavBar";
+
+export default function App() {
   return (
-    <div>
+    <div className="relative h-screen">
       <TopBar />
-      <AnimatedBackground />
+      <main>
+        <Outlet />
+      </main>
+      <BottomNavBar />
     </div>
   );
 }
-
-export default App;

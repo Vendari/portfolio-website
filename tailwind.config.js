@@ -4,6 +4,9 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      screens: {
+        xs: "400px",
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
@@ -51,8 +54,46 @@ export default {
           5: "hsl(var(--chart-5))",
         },
       },
+      animation: {
+        wiggle: "wiggle 1s ease-in-out infinite",
+      },
+      keyframes: {
+        wiggle: {
+          "0%, 100%": { transform: "rotate(-3deg)" },
+          "50%": { transform: "rotate(3deg)" },
+        },
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],
-  safelist: ["cursor-pointer", "bg-gray-900", "bg-white"],
+  safelist: [
+    "cursor-pointer",
+    "bg-gray-900",
+    "bg-white",
+    "bg-cyan-100",
+    "bg-violet-100",
+    "bg-emerald-100",
+    "bg-rose-100",
+    "bg-fuchsia-100",
+    "text-cyan-400",
+    "text-violet-400",
+    "text-emerald-400",
+    "text-rose-400",
+    "text-fuchsia-400",
+    "text-cyan-500",
+    "text-violet-500",
+    "text-emerald-500",
+    "text-rose-500",
+    "text-fuchsia-500",
+    "text-cyan-600",
+    "text-violet-600",
+    "text-emerald-600",
+    "text-rose-600",
+    "text-fuchsia-600",
+    "text-cyan-700",
+    "text-violet-700",
+    "text-emerald-700",
+    "text-rose-700",
+    "text-fuchsia-700",
+  ],
 };
