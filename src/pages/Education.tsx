@@ -36,7 +36,7 @@ function Education() {
             src={import.meta.env.BASE_URL + "/coventryUniversityLogo.png"}
             width={100}
             height={100}
-            className="w-2/3 md:w-1/3 aspect-square object-cover rounded-full bg-white animate-float p-5"
+            className="w-2/5 lg:w-1/3 aspect-square object-cover rounded-full bg-white animate-float p-5"
           />
           <div className="flex flex-col items-start text-start">
             <h1 className="scroll-m-20 text-4xl font-semibold tracking-tight lg:text-6xl z-10 text-white">
