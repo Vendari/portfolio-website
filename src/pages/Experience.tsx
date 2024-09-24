@@ -203,8 +203,8 @@ function Experience() {
           </>
         ) : (
           <>
-            {/* (top-16) 4rem + (navigation buttons bottoom-20) 5rem + (for spacing) 5rem  */}
-            <div className="flex flex-col gap-10 fixed px-4 overflow-auto h-full top-16 max-h-[calc(100%_-_14rem)] py-20 w-screen">
+            {/* (top-16) 4rem + (navigation buttons bottoom-20) 5rem + (for spacing) 3rem  */}
+            <div className="flex flex-col gap-10 fixed px-4 overflow-auto h-full top-16 max-h-[calc(100%_-_12rem)] py-20 w-screen">
               {[...content].reverse().map((experience) => (
                 <Card
                   key={experience.name}
@@ -244,16 +244,16 @@ function Experience() {
       {!(height > 900 && width > 500) && (
         <div className="fixed bottom-20 left-0 z-20 flex w-full items-center justify-around pt-3">
           <Button
-            variant="ghost"
-            className="opacity-90 hover:opacity-80 text-neutral-50 hover:text-neutral-700 gap-2"
+            variant="secondary"
+            className="opacity-90 hover:opacity-80 gap-2"
             onClick={() => navigate("/about")}
           >
             <RxArrowLeft size={20} />
             About
           </Button>
           <Button
-            variant="ghost"
-            className="opacity-90 hover:opacity-80 animate-wiggle  text-neutral-50 hover:text-neutral-700 gap-2"
+            variant="secondary"
+            className="opacity-90 hover:opacity-80 animate-wiggle gap-2"
             onClick={() => navigate("/education")}
           >
             Education

@@ -3,9 +3,11 @@ import { Button } from "../components/ui/button";
 import { RxArrowLeft, RxArrowRight } from "react-icons/rx";
 import gsap from "gsap";
 import { useNavigate } from "react-router-dom";
+import useWindowDimensions from "@/hooks/useWindowDimensions";
 
 function About() {
   const navigate = useNavigate();
+  const { height, width } = useWindowDimensions();
 
   useLayoutEffect(() => {
     gsap.fromTo(
@@ -45,27 +47,61 @@ function About() {
               <b>high-quality results</b> while creating a positive and
               collaborative work environment.
             </p>
-            <div className="flex w-full items-center justify-around pt-3">
-              <Button
-                variant="ghost"
-                className="opacity-90 hover:opacity-80  text-neutral-50 hover:text-neutral-700 gap-2"
-                onClick={() => navigate("/")}
-              >
-                <RxArrowLeft size={20} />
-                Home
-              </Button>
-              <Button
-                variant="ghost"
-                className="opacity-90 hover:opacity-80 animate-wiggle text-neutral-50 hover:text-neutral-700 gap-2"
-                onClick={() => navigate("/experience")}
-              >
-                Experience
-                <RxArrowRight size={20} />
-              </Button>
-            </div>
+            {height > 900 && width > 500 && (
+              <div className="flex w-full items-center justify-around pt-3">
+                <Button
+                  variant={
+                    !(height > 900 && width > 500) ? "secondary" : "ghost"
+                  }
+                  className={`opacity-90 hover:opacity-80 ${
+                    height > 900 &&
+                    width > 500 &&
+                    "text-neutral-50 hover:text-neutral-700"
+                  } gap-2`}
+                  onClick={() => navigate("/")}
+                >
+                  <RxArrowLeft size={20} />
+                  Home
+                </Button>
+                <Button
+                  variant={
+                    !(height > 900 && width > 500) ? "secondary" : "ghost"
+                  }
+                  className={`opacity-90 hover:opacity-80 animate-wiggle ${
+                    height > 900 &&
+                    width > 500 &&
+                    "text-neutral-50 hover:text-neutral-700"
+                  } gap-2`}
+                  onClick={() => navigate("/experience")}
+                >
+                  Experience
+                  <RxArrowRight size={20} />
+                </Button>
+              </div>
+            )}
           </div>
         </div>
       </div>
+      {!(height > 900 && width > 500) && (
+        <div className="fixed bottom-20 left-0 z-20 flex w-full items-center justify-around pt-3">
+          <Button
+            variant="secondary"
+            className="opacity-90 hover:opacity-80 gap-2"
+            onClick={() => navigate("/")}
+          >
+            <RxArrowLeft size={20} />
+            Home
+          </Button>
+          <Button
+            variant="secondary"
+            className="opacity-90 hover:opacity-80 animate-wiggle gap-2"
+            onClick={() => navigate("/experience")}
+          >
+            Experience
+            <RxArrowRight size={20} />
+          </Button>
+        </div>
+      )}
     </div>
   );
 }

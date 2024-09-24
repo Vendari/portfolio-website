@@ -8,9 +8,11 @@ import {
 } from "react-icons/rx";
 import gsap from "gsap";
 import { useNavigate } from "react-router-dom";
+import useWindowDimensions from "@/hooks/useWindowDimensions";
 
 function Contact() {
   const navigate = useNavigate();
+  const { height, width } = useWindowDimensions();
 
   useLayoutEffect(() => {
     gsap.fromTo(
@@ -70,8 +72,12 @@ function Contact() {
             </div>
             <div className="flex w-full items-center justify-around pt-3">
               <Button
-                variant="ghost"
-                className="opacity-90 hover:opacity-80  text-neutral-50 hover:text-neutral-700 gap-2"
+                variant={!(height > 900 && width > 500) ? "secondary" : "ghost"}
+                className={`opacity-90 hover:opacity-80 ${
+                  height > 900 &&
+                  width > 500 &&
+                  "text-neutral-50 hover:text-neutral-700"
+                } gap-2`}
                 onClick={() => navigate("/education")}
               >
                 <RxArrowLeft size={20} />
