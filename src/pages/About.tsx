@@ -29,12 +29,12 @@ function About() {
   return (
     <div className="flex flex-col h-full w-full pb-10 items-center justify-center text-center ">
       <div className="content absolute top-1/2 left-1/2 z-10 w-full lg:w-[70%] flex flex-col items-center gap-2 justify-center">
-        <div className="flex flex-col md:flex-row items-center justify-around w-full gap-12 px-4 md:px-0">
+        <div className="flex flex-col md:flex-row items-center justify-around w-full gap-6 sm:gap-12 px-4 md:px-0">
           <img
             src={import.meta.env.BASE_URL + "/profile.jpg"}
             width={100}
             height={100}
-            className="w-2/5 md:w-2/3 lg:w-1/3 aspect-square object-cover rounded-full  animate-float"
+            className="w-2/5 lg:w-1/3 aspect-square object-cover rounded-full  animate-float"
           />
           <div className="flex flex-col items-start text-start">
             <p className="text-md md:text-lg lg:text-xl text-white font-semibold opacity-90">

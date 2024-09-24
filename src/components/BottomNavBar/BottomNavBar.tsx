@@ -55,7 +55,7 @@ export const BottomNavBar: FC = () => {
   }, [location.pathname]);
 
   return (
-    <div className="flex h-14 xs:h-24 to-transparent w-full justify-around items-center fixed z-10 bottom-0 left-0 text-slate-500 bg-gradient-to-t from-amber-50">
+    <div className="flex h-14 to-transparent w-full justify-around items-center fixed z-10 bottom-0 left-0 text-slate-500 bg-gradient-to-t from-amber-50">
       <div className="relative flex w-full h-full max-w-[1280px]">
         {routes.map((route) => {
           return (
@@ -75,7 +75,7 @@ export const BottomNavBar: FC = () => {
                     style: { transition: "300ms" },
                   })}
                   {isActive || isTransitioning ? (
-                    <span className="hidden sm:block">{route.name}</span>
+                    <span className="hidden  md:block">{route.name}</span>
                   ) : (
                     ""
                   )}
@@ -91,7 +91,7 @@ export const BottomNavBar: FC = () => {
             animation: `jump${jumpAnimation.current} 300ms ease-in-out`,
             width: `${100 / routes.length}%`,
           }}
-          className={`h-6 bottom-10 xs:bottom-16 absolute z-5 flex justify-center items-center`}
+          className={`h-6 bottom-10 md:bottom-16 absolute z-5 flex justify-center items-center`}
         >
           <img
             src={import.meta.env.BASE_URL + "/circle.svg"}

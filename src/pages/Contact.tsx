@@ -35,21 +35,23 @@ function Contact() {
     <div className="flex flex-col h-full w-full pb-10 items-center justify-center text-center ">
       <div className="content absolute top-1/2 left-1/2 z-10 w-full lg:w-[70%] flex flex-col items-center gap-2 justify-center">
         <div className="flex flex-col md:flex-row items-center justify-around w-full gap-12 px-4 md:px-0">
-          <div className="flex flex-col items-start text-start gap-4">
+          <div className="flex flex-col items-center gap-4">
             <h1 className="scroll-m-20 text-4xl font-semibold tracking-tight lg:text-6xl z-10 text-white">
               Find me
             </h1>
-            <div className="flex gap-3 w-full ms-[-8px] justify-center">
+            <div className="flex gap-3 w-full justify-center">
               <Button
                 onClick={() => {
                   window.location.assign("mailto:jakub.brodecki@yahoo.com");
                 }}
+                className="px-3"
                 variant="link"
               >
                 <RxEnvelopeClosed size={40} />
               </Button>
               <Button
                 variant="link"
+                className="px-3"
                 onClick={() =>
                   window.open("https://github.com/vendari", "_blank")
                 }
@@ -58,6 +60,7 @@ function Contact() {
               </Button>
               <Button
                 variant="link"
+                className="px-3"
                 onClick={() =>
                   window.open("https://www.linkedin.com/in/vendari/", "_blank")
                 }
